@@ -1,0 +1,248 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="微信工作者的智库">
+  <meta name="keywords" content="微信运营,微信工具,微信营销,微信智库">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>简直・微信百宝箱</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="https://cdn1.lncld.net/static/js/av-mini-0.5.5.js"></script>
+<style>
+.am-header-default {
+background: #4C6381;
+}
+h2 {
+  color: #4C6381;
+}
+a {
+  color: #999;
+}
+
+.am-accordion-basic .am-active .am-accordion-title {
+color: #4C6381;
+}
+.am-gotop-default a {
+background: #4C6381;
+}
+</style>
+</head>
+<body style="-webkit-app-region: drag">
+
+
+  <header data-am-widget="header"
+          class="am-header am-header-default">
+      <div class="am-header-left am-header-nav">
+          <a href="/" class="">
+
+                <i class="am-header-icon am-icon-home"></i>
+          </a>
+      </div>
+
+      <h1 class="am-header-title">
+          <a href="#title-link" class="">
+            简直・微信百宝箱
+          </a>
+      </h1>
+
+<!-- 链接触发器， href 属性为目标元素 ID -->
+      <div class="am-header-right am-header-nav">
+          <a href="#rightpanel" data-am-offcanvas class="">
+
+                <i class="am-header-icon am-icon-bars"></i>
+          </a>
+      </div>
+  </header>
+
+	<p class="am-kai" style="text-align:center;">
+		微信工作者的智库，已收录<span class="number"></span>个实用工具
+	</p>
+
+  <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+
+	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+  <div class="am-g doc-am-g">
+    <div id="sites" data-am-widget="list_news" class=" am-list-news am-list-news-default">
+    </div>
+  </div>
+
+
+  <div data-am-widget="gotop" class="am-gotop am-gotop-default" >
+    <a href="#top" title="回到顶部">
+        <span class="am-gotop-title">回到顶部</span>
+          <i class="am-gotop-icon am-icon-chevron-up"></i>
+    </a>
+  </div>
+
+  <footer data-am-widget="footer"
+          class="am-footer am-footer-default"
+           data-am-footer="{  }">
+    <div class="am-footer-miscs ">
+
+    </div>
+  </footer>
+
+
+
+
+
+<!-- 侧边栏内容 -->
+<div id="rightpanel" class="am-offcanvas">
+  <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+    <div class="am-offcanvas-content">
+        部分网站需要在PC上打开，才能正常扫码
+        <br>
+    </div>
+  </div>
+</div>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+
+<script type="text/javascript">
+
+var totalClick = 0;
+
+AV.initialize("kxrd1de8hg4tbhzie32q2ifck6iuccaukw2i4umxmms34fnv", "zpd95yj3t91mdcmqhcq2b3dbd8vsk253fekigphi2jp8nisj");
+
+var types = [];
+var Sites = AV.Object.extend("sites");
+var query = new AV.Query(Sites);
+query.descending("click");
+query.limit(1000);
+query.find({
+  success: function(results) {
+    var number = results.length;
+    $('.number').append(number);
+
+    var ulnew = '<div class="am-u-sm-12 am-u-md-4 am-u-lg-3 am-list-news-hd am-cf"> <div class="am-list-news-hd am-cf"><a href="https://jinshuju.net/f/0l3mpb" target="_blank"><h2>最新收录</h2><span class="am-list-news-more am-fr">提交 &raquo;</span></a></div><div class="am-list-news-bd"><ul class="am-list top5" data-cat="new"></ul></div> </div>';
+    $('#sites').append(ulnew);
+
+    for (var i = 0; i < results.length; i++) {
+      var obj = results[i];
+      var url = obj.get('url');
+      var name = obj.get('name');
+      var type = obj.get('type');
+      var click = obj.get('click');
+          totalClick += click;
+      var use = obj.get('use');
+      var active = obj.get('active');
+      if($.inArray(type, types) < 0 && active == 1){
+        types.push(type);
+        var ul = '<div class="am-u-sm-12 am-u-md-4 am-u-lg-3 am-list-news-hd am-cf"> <div class="am-list-news-hd am-cf"><a href="/cat.html?cat=' + type + '"> <h2>' + type + ' TOP5</h2><span class="am-list-news-more am-fr">更多 &raquo;</span></a></div><div class="am-list-news-bd"> <ul class="am-list top5" data-cat="' + type + '"></ul></div> </div>';
+        $('#sites').append(ul);
+      }
+
+      var li = '<li class="am-g am-list-item-dated"><a class="am-list-item-hd" target="_blank" href="/p.html?id=' + obj.id + '" data-click="' + click + '" ontouchstart="add(\'' + obj.id + '\', ' + click + ');" onclick="add(\'' + obj.id + '\', ' + click + ');" target="_blank">' + name + '<span class="am-list-date">' + use + '/' + click + '</span></a></li>';
+      if($('ul[data-cat="' + type + '"].top5 li').length<5){
+        $('ul[data-cat="' + type + '"].top5').append(li);
+      } else {
+        $('ul[data-cat="' + type + '"].else').append(li);
+      }
+      if(i>=results.length-5){
+        $('ul[data-cat="new"].top5').append(li);
+      }
+    }
+
+    var opt = {
+      title: number + '个实用微信运营工具，被点击过' + totalClick + '次|简直・微信百宝箱',
+      imgUrl: 'http://icewent.qiniudn.com/wx5s/zxl.jpg',
+      success: function() {
+      },
+      cancel: function() {
+      }
+    };
+    SM_TRACK.setTimeLine(opt);
+
+    var opt = {
+      title: number + '个实用微信运营工具，被点击过' + totalClick + '次|简直・微信百宝箱',
+      imgUrl: 'http://icewent.qiniudn.com/wx5s/zxl.jpg',
+      desc: '随身携带，随查随用，微信运营人员必备，做微信必须知道的网站',
+      success: function() {
+      },
+      cancel: function() {
+      }
+    };
+    SM_TRACK.setAppMessage(opt);
+
+
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+function add(objid, click){
+
+  console.log(objid);
+        var query = new AV.Query(Sites);
+
+        query.get(objid, {
+          success: function(a) {
+            a.set("click", click + 1);
+            a.save(null, {
+              error: function(userAgain, error) {
+                // This will error, since the AV.User is not authenticated
+              }
+            });
+          }
+        });
+
+
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+var _smq = _smq || [];
+_smq.push(['_setAccount', '3c65513', new Date()]);
+_smq.push(['pageview']);
+
+(function() {
+  var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+  sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+})();
+
+
+</script>
+</html>

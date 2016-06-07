@@ -1,0 +1,38 @@
+/* Write your styles */
+.screenshot {
+  overflow: hidden;
+}
+
+[class*=am-u-]+[class*=am-u-]:last-child {
+	float: left;
+}
+
+.am-breadcrumb {
+	padding: 0.2em 1em;
+}
+
+.intro {
+	padding: 15px;
+	background: #eee;
+	font-size: 12px;
+}
+
+@media only screen and (min-width:641px) {
+	.intro {
+		margin: 0 -10px 0 10px;
+	}
+}
+
+#ds-thread #ds-reset .ds-replybox .ds-avatar {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+div.am-duoshuo.am-duoshuo-default {
+	margin-left: -6px;
+}
+
+.am-btn-success {
+	background: #4C6381;
+	border: 0;
+}
